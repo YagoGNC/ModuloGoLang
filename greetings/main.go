@@ -8,9 +8,9 @@ import (
 
 func Hello(name string) (string, error) {
 	if name == "" {
-		return "", errors.New("Nombre vacio")
+		return name, errors.New("Nombre vacio")
 	}
-	message := fmt.Sprintf(randomFormat(), name)
+	message := fmt.Sprint(randomFormat())
 	return message, nil
 }
 
